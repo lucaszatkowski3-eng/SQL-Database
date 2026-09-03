@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SQL Studio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="logo">
+            <span class="logo-icon">⌘</span>
+            <span>SQL Studio</span>
+        </div>
+
+        <div class="top-actions">
+            <button id="runBtn" class="run-btn">
+                ▶ Ausführen
+            </button>
+
+            <button id="clearBtn">
+                Leeren
+            </button>
+        </div>
+    </header>
+
+
+    <main class="app">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="sidebar-title">
+                Datenbank
+            </div>
+
+            <div class="database">
+                <div class="database-title">
+                    ▼ my_database
+                </div>
+
+                <div class="table">
+                    <span>▦</span>
+                    users
+                </div>
+
+                <div class="table">
+                    <span>▦</span>
+                    products
+                </div>
+
+                <div class="table">
+                    <span>▦</span>
+                    orders
+                </div>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <section class="workspace">
+
+            <div class="editor-header">
+                <span>query.sql</span>
+
+                <span id="status" class="status">
+                    Bereit
+                </span>
+            </div>
+
+            <div class="editor-wrapper">
+                <textarea id="sqlEditor" spellcheck="false">SELECT *
+FROM users
+LIMIT 10;</textarea>
+            </div>
+
+
+            <div class="results">
+
+                <div class="results-header">
+                    <span>Ergebnis</span>
+                    <span id="resultInfo">Noch keine Abfrage ausgeführt</span>
+                </div>
+
+                <div id="resultContainer" class="result-container">
+
+                    <div class="empty-result">
+                        <div class="empty-icon">▤</div>
+                        <h3>Keine Ergebnisse</h3>
+                        <p>Führe eine SQL-Abfrage aus.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <span>SQL Studio</span>
+        <span>SQLite • Browser</span>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
